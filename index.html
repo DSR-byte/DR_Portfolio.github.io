@@ -6,6 +6,9 @@
   <title>David Rock | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
@@ -14,11 +17,15 @@
       color: #1a1a1a;
     }
     nav {
-      background: #1a1a1a;
+      background: rgba(0, 0, 0, 0.8);
       padding: 1rem 2rem;
       display: flex;
       justify-content: center;
       gap: 2rem;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      top: 0;
     }
     nav a {
       color: white;
@@ -29,9 +36,9 @@
       text-decoration: underline;
     }
     header {
-      background: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb') center/cover;
+      background: url('https://images.unsplash.com/photo-1581090700227-1e8c9cb0c13f') center/cover no-repeat;
       color: white;
-      padding: 5rem 2rem;
+      padding: 8rem 2rem 6rem;
       text-align: center;
     }
     header h1 {
@@ -43,9 +50,12 @@
       margin-top: 1rem;
     }
     section {
-      padding: 4rem 2rem;
+      padding: 6rem 2rem;
       max-width: 1000px;
       margin: auto;
+    }
+    section:nth-of-type(even) {
+      background-color: #f9f9f9;
     }
     .project-gallery {
       display: grid;
@@ -53,10 +63,14 @@
       gap: 2rem;
     }
     .project-card {
-      background: #f9f9f9;
+      background: white;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .project-card:hover {
+      transform: scale(1.03);
     }
     .project-card img {
       width: 100%;
@@ -81,6 +95,9 @@
     a:hover {
       text-decoration: underline;
     }
+    .spacer {
+      height: 60px;
+    }
   </style>
 </head>
 <body>
@@ -91,11 +108,18 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <div class="spacer"></div>
+
   <header>
     <h1>David Rock</h1>
     <p>Electrical Engineering Student | Cal Poly San Luis Obispo</p>
     <p><a href="mailto:drock@calpoly.edu" style="color:white;">drock@calpoly.edu</a> | (858) 649-3516</p>
   </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a hands-on engineer who thrives at the intersection of creativity, precision, and exploration. My interests lie in RF systems, analog circuits, embedded development, and systems integration. I’m passionate about prototyping, simulation, and closing the gap between theory and application.</p>
+  </section>
 
   <section id="labs">
     <h2>Featured Lab Projects</h2>
@@ -129,11 +153,6 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a hands-on engineer who thrives at the intersection of creativity, precision, and exploration. My interests lie in RF systems, analog circuits, embedded development, and systems integration. I’m passionate about prototyping, simulation, and closing the gap between theory and application.</p>
   </section>
 
   <section id="projects">
