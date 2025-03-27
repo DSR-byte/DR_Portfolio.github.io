@@ -6,150 +6,182 @@
   <title>David Rock | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    html {
+    * {
+      box-sizing: border-box;
       scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
     }
     body {
       font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      color: #1a1a1a;
+      background-color: #000;
+      color: #f9fafb;
     }
+
     nav {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 1rem;
       display: flex;
       justify-content: center;
       gap: 2rem;
-      position: fixed;
-      width: 100%;
       z-index: 1000;
-      top: 0;
     }
     nav a {
-      color: white;
-      text-decoration: none;
+      color: #fff;
       font-weight: bold;
+      text-decoration: none;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #3b82f6;
     }
+
     header {
-      background: url('https://images.unsplash.com/photo-1581090700227-1e8c9cb0c13f') center/cover no-repeat;
-      color: white;
-      padding: 8rem 2rem 6rem;
+      background: linear-gradient(135deg, #cbd5ff, #e0e7ff);
+      padding: 12rem 2rem 6rem;
       text-align: center;
     }
     header h1 {
       font-size: 3rem;
-      margin: 0;
+      margin-bottom: 1rem;
+      color: #000;
     }
     header p {
       font-size: 1.25rem;
-      margin-top: 1rem;
+      color: #111827;
     }
+    header a {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+
     section {
       padding: 6rem 2rem;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease-out;
     }
-    section:nth-of-type(even) {
-      background-color: #f9f9f9;
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
     .project-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
     }
     .project-card {
-      background: white;
-      border-radius: 12px;
+      background-color: #1f2937;
+      border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease-in-out;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      color: #f9fafb;
     }
     .project-card:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
     .project-card img {
       width: 100%;
-      height: auto;
+      height: 200px;
+      object-fit: cover;
     }
     .project-card .content {
       padding: 1rem;
+      background-color: #1f2937;
+      color: #f9fafb;
     }
-    .project-card h3 {
-      margin-top: 0;
+    .project-card .content h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: #f9fafb;
     }
+
+    .popup-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+    .popup-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+      color: #000;
+    }
+    .popup-close {
+      float: right;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
     footer {
+      background-color: #111827;
+      color: #9ca3af;
       text-align: center;
       padding: 2rem;
-      background: #1a1a1a;
-      color: white;
+      margin-top: 4rem;
     }
-    a {
-      color: #007acc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .spacer {
-      height: 60px;
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#about">About Me</a>
+  <nav aria-label="Main navigation">
+    <a href="#about">About</a>
     <a href="#labs">Labs</a>
-    <a href="#projects">Personal Projects</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#lab-reports">Lab Reports</a>
     <a href="#contact">Contact</a>
   </nav>
-
-  <div class="spacer"></div>
 
   <header>
     <h1>David Rock</h1>
     <p>Electrical Engineering Student | Cal Poly San Luis Obispo</p>
-    <p><a href="mailto:drock@calpoly.edu" style="color:white;">drock@calpoly.edu</a> | (858) 649-3516</p>
+    <p><a href="mailto:drock@calpoly.edu">drock@calpoly.edu</a> | (858) 649-3516</p>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a hands-on engineer who thrives at the intersection of creativity, precision, and exploration. My interests lie in RF systems, analog circuits, embedded development, and systems integration. I’m passionate about prototyping, simulation, and closing the gap between theory and application.</p>
+    <p>I’m a hands-on engineer who thrives at the intersection of creativity, precision, and exploration. My interests lie in RF systems, analog circuits, embedded development, and systems integration.</p>
   </section>
 
   <section id="labs">
-    <h2>Featured Lab Projects</h2>
+    <h2>Lab Projects</h2>
     <div class="project-gallery">
-      <div class="project-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Phasor_diagram_-_Wikipedia.png/800px-Phasor_diagram_-_Wikipedia.png" alt="Phasor Diagram">
+      <div class="project-card" onclick="openPopup('Power Measurements', `Validated Kirchhoff's Laws and calculated power parameters in AC circuits using LTSpice and GeoGebra.`)">
+        <img src="https://github.com/DSR-byte/DSR-byte.github.io/blob/main/lissaju%20max%20power.png?raw=true" alt="Power Measurements">
         <div class="content">
-          <h3>Phasor Diagrams & Power Measurements</h3>
-          <p>Used LTSpice and GeoGebra to validate Kirchhoff's Laws and calculate real, reactive, and apparent power in AC circuits.</p>
+          <h3>Power Measurements</h3>
         </div>
       </div>
-      <div class="project-card">
-        <img src="https://www.electronics-tutorials.ws/filter/filter32.gif" alt="Low/High-Pass Filters">
+      <div class="project-card" onclick="openPopup('Filter Analysis', `Modeled low/high-pass filter circuits and compared results across experimental and simulation data.`)">
+        <img src="https://github.com/DSR-byte/DSR-byte.github.io/blob/main/Circuit.png?raw=true" alt="Filter Analysis">
         <div class="content">
-          <h3>Low & High-Pass Filter Analysis</h3>
-          <p>Analyzed RC filter behavior, determined cutoff frequencies, and compared theoretical, experimental, and LTSpice results.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/3-phase_AC_waveform.svg/800px-3-phase_AC_waveform.svg.png" alt="Three Phase">
-        <div class="content">
-          <h3>Three-Phase Network Simulation</h3>
-          <p>Simulated three-phase power systems, measured efficiency, system losses, and analyzed power factor behavior using LTSpice.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Band-stop_filter_response.svg/640px-Band-stop_filter_response.svg.png" alt="Band Stop">
-        <div class="content">
-          <h3>Parallel Resonance Circuit</h3>
-          <p>Modeled practical component losses and analyzed resonant behavior using impedance analysis and LTSpice simulation.</p>
+          <h3>Filter Analysis</h3>
         </div>
       </div>
     </div>
@@ -157,9 +189,36 @@
 
   <section id="projects">
     <h2>Personal Projects</h2>
-    <ul>
-      <li><strong>Wireless Charging Prototype:</strong> Built a small-scale wireless power system using LTSpice, MATLAB, and Fusion 360 to explore voltage scaling and power distribution.</li>
-      <li><strong>Hamilton Stage Model:</strong> Developed a working model combining 3D design, printed hardware, PCB design, and Arduino control to simulate real-world stage operations.</li>
+    <div class="project-gallery">
+      <div class="project-card" onclick="openPopup('Wireless Charging System', 'Built a small-scale wireless power transfer prototype using LTSpice, MATLAB, and Fusion 360.')">
+        <img src="https://i0.wp.com/blog.ugreen.com/wp-content/uploads/2022/03/wireless-charging-speed_无文案.png?resize=1140%2C680&ssl=1" alt="Wireless Charging">
+        <div class="content">
+          <h3>Wireless Charging System</h3>
+        </div>
+      </div>
+      <div class="project-card" onclick="openPopup('Hamilton Stage Model', 'Created a mechanical stage simulator with PCB design, Arduino programming, and 3D printed parts.')">
+        <img src="https://github.com/DSR-byte/DSR-byte.github.io/blob/main/Hamilton%20stage.png?raw=true" alt="Hamilton Stage Model">
+        <div class="content">
+          <h3>Hamilton Stage Model</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>You can view or download my resume below:</p>
+    <iframe src="PATH_TO_YOUR_RESUME.pdf" width="100%" height="600px" style="border: none;"></iframe>
+  </section>
+
+  <section id="lab-reports">
+    <h2>Lab Reports</h2>
+    <p>These are detailed reports from my coursework and projects.</p>
+    <ul style="list-style: disc; padding-left: 1.5rem;">
+      <li><a href="PATH_TO_LAB1.pdf" target="_blank">Power Measurements Lab Report (PDF)</a></li>
+      <li><a href="PATH_TO_LAB2.pdf" target="_blank">Filter Analysis Lab Report (PDF)</a></li>
+      <li><a href="PATH_TO_LAB3.pdf" target="_blank">Wireless Charging System Report (PDF)</a></li>
+      <li><a href="PATH_TO_LAB4.pdf" target="_blank">Hamilton Stage Model Report (PDF)</a></li>
     </ul>
   </section>
 
@@ -167,11 +226,60 @@
     <h2>Contact</h2>
     <p>Email: <a href="mailto:drock@calpoly.edu">drock@calpoly.edu</a></p>
     <p>Phone: (858) 649-3516</p>
-    <p>Location: Irvine, CA</p>
   </section>
 
+  <div class="popup-panel" id="popup">
+    <div class="popup-content">
+      <span class="popup-close" onclick="closePopup()">&times;</span>
+      <h2 id="popup-title"></h2>
+      <p id="popup-desc"></p>
+    </div>
+  </div>
+
   <footer>
-    <p>&copy; 2025 David Rock. Built with ❤️ for engineering exploration.</p>
+    <p>&copy; 2025 David Rock. Built with 💡 and precision.</p>
   </footer>
+
+  <script>
+    let observedSections = [];
+    let intersectionObserver;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      observedSections = document.querySelectorAll("section");
+      intersectionObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.1 });
+
+      observedSections.forEach(sec => intersectionObserver.observe(sec));
+
+      document.getElementById('popup').addEventListener('click', function (e) {
+        if (e.target === this) closePopup();
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY === 0) {
+        observedSections.forEach(sec => {
+          sec.classList.remove("visible");
+          intersectionObserver.unobserve(sec);
+          intersectionObserver.observe(sec);
+        });
+      }
+    });
+
+    function openPopup(title, description) {
+      document.getElementById('popup-title').textContent = title;
+      document.getElementById('popup-desc').textContent = description;
+      document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
