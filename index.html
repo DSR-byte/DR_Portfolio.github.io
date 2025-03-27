@@ -17,7 +17,6 @@
       background-color: #000;
       color: #f9fafb;
     }
-
     nav {
       position: fixed;
       width: 100%;
@@ -36,7 +35,6 @@
     nav a:hover {
       color: #3b82f6;
     }
-
     header {
       background: linear-gradient(135deg, #cbd5ff, #e0e7ff);
       padding: 12rem 2rem 6rem;
@@ -55,7 +53,6 @@
       color: #2563eb;
       text-decoration: underline;
     }
-
     section {
       padding: 6rem 2rem;
       max-width: 1200px;
@@ -73,7 +70,6 @@
       margin-bottom: 1rem;
       color: #fff;
     }
-
     .project-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -104,9 +100,7 @@
     .project-card .content h3 {
       margin: 0;
       font-size: 1.25rem;
-      color: #f9fafb;
     }
-
     .popup-panel {
       position: fixed;
       top: 0;
@@ -132,7 +126,6 @@
       cursor: pointer;
       font-size: 1.5rem;
     }
-
     footer {
       background-color: #111827;
       color: #9ca3af;
@@ -140,7 +133,6 @@
       padding: 2rem;
       margin-top: 4rem;
     }
-
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
@@ -213,13 +205,27 @@
 
   <section id="lab-reports">
     <h2>Lab Reports</h2>
-    <p>These are detailed reports from my coursework and projects.</p>
-    <ul style="list-style: disc; padding-left: 1.5rem;">
-      <li><a href="PATH_TO_LAB1.pdf" target="_blank">Power Measurements Lab Report (PDF)</a></li>
-      <li><a href="PATH_TO_LAB2.pdf" target="_blank">Filter Analysis Lab Report (PDF)</a></li>
-      <li><a href="PATH_TO_LAB3.pdf" target="_blank">Wireless Charging System Report (PDF)</a></li>
-      <li><a href="PATH_TO_LAB4.pdf" target="_blank">Hamilton Stage Model Report (PDF)</a></li>
-    </ul>
+    <p>Preview or read each lab report directly below:</p>
+
+    <div style="margin-bottom: 2rem;">
+      <h3>Power Measurements Lab Report</h3>
+      <iframe src="PATH_TO_LAB1.pdf" width="100%" height="500px" style="border: none;"></iframe>
+    </div>
+
+    <div style="margin-bottom: 2rem;">
+      <h3>Filter Analysis Lab Report</h3>
+      <iframe src="PATH_TO_LAB2.pdf" width="100%" height="500px" style="border: none;"></iframe>
+    </div>
+
+    <div style="margin-bottom: 2rem;">
+      <h3>Wireless Charging System Report</h3>
+      <iframe src="PATH_TO_LAB3.pdf" width="100%" height="500px" style="border: none;"></iframe>
+    </div>
+
+    <div style="margin-bottom: 2rem;">
+      <h3>Hamilton Stage Model Report</h3>
+      <iframe src="PATH_TO_LAB4.pdf" width="100%" height="500px" style="border: none;"></iframe>
+    </div>
   </section>
 
   <section id="contact">
