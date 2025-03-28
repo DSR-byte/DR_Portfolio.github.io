@@ -196,9 +196,9 @@
 <body>
   <nav aria-label="Main navigation">
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
     <a href="#resume">Resume</a>
     <a href="#lab-reports">Lab Reports</a>
+    <a href="#projects">Projects</a>
     <a href="#Hobbies">Hobbies</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -214,27 +214,30 @@
   </section>
 <!-- here is the resume section -->
   <section id="resume">
-  <h2>Resume</h2>
-  <p>You can view or download my resume below:</p>
-  <iframe src="https://drive.google.com/file/d/15X0XwWoqaV_cupIxD0Zd08mYHaDIS9R1/preview" width="100%" height="600px" style="border: none;"></iframe>
-</section>
+    <div class="resume-card">
+      <h2>Resume</h2>
+      <p class="resume-intro">A snapshot of my experience, education, and projects. View or download below:</p>
+      <iframe src="https://drive.google.com/file/d/15X0XwWoqaV_cupIxD0Zd08mYHaDIS9R1/preview" width="100%" height="600px" style="border: none; border-radius: 8px;"></iframe>
+    </div>
+  </section>
+
 
 <!-- Lab Reports Section -->
 <section id="lab-reports">
   <h2>Lab Reports</h2>
 
   <div class="pdf-card">
-    <h3>Power Measurements Lab Report</h3>
+    <h3>Max Power Transfer</h3>
     <iframe src="https://drive.google.com/file/d/1fcDD1I49CfYEdMc6i5kwbMu3EwFcnzzy/preview" width="100%" height="500px" style="border: none;"></iframe>
   </div>
 
   <div class="pdf-card">
-    <h3>Filter Analysis Lab Report</h3>
+    <h3>Power Factor Correction</h3>
     <iframe src="https://drive.google.com/file/d/1tjl5xguiClZi8_g9NpJN4wzW8izX3wDE/preview" width="100%" height="500px" style="border: none;"></iframe>
   </div>
 
   <div class="pdf-card">
-    <h3>Wireless Charging System Report</h3>
+    <h3>Filter Analysis</h3>
     <iframe src="https://drive.google.com/file/d/1thUjH2pB64ilPenuksI4JDpY1O4FHa5M/preview" width="100%" height="500px" style="border: none;"></iframe>
   </div>
 </section>
@@ -247,7 +250,7 @@
       
       <div class="project-card" onclick="openPopup('Wireless Charging System', `Built a small-scale wireless power transfer prototype utilizing LTSpice for circuit simulation, MATLAB for analysis, and Fusion 360 for mechanical design.
       This project allowed me to apply newly introduced concepts in power transfer and regulation, bridging theoretical knowledge with practical experimentation at the component level.
-      I was able to successfully charge a battery wirelessly from a power supply, which made the results especially rewarding and exciting to demonstrate.')">
+      I was able to successfully charge a battery wirelessly from a power supply, which made the results especially rewarding and exciting to demonstrate.`)">
         
         <img src="https://i0.wp.com/blog.ugreen.com/wp-content/uploads/2022/03/wireless-charging-speed_无文案.png?resize=1140%2C680&ssl=1" alt="Wireless Charging">
         <div class="content">
@@ -257,7 +260,7 @@
       
       <div class="project-card" onclick="openPopup('A Recreation of the Stage in the Musical Hamilton', `I designed and built a mechanical stage simulator inspired by the rotating platform used in the musical Hamilton. 
       The system incorporated custom PCB design, Arduino programming, and 3D-printed components, along with an IR-based control interface for precise rotational control. 
-      This project was presented at a student showcase, where it received one of the highest evaluation scores among all entries.')">
+      This project was presented at a student showcase, where it received one of the highest evaluation scores among all entries.`)">
         
         <img src="https://raw.githubusercontent.com/DSR-byte/DSR-byte.github.io/refs/heads/main/Hamiltoc%20stage.HEIC" alt="Hamilton Stage Model">
         <div class="content">
