@@ -155,6 +155,25 @@
         font-size: 2rem;
       }
     }
+   .pdf-card {
+      background-color: #1f2937;
+      padding: 1.5rem;
+      margin: 2rem auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      max-width: 1000px;
+      transition: transform 0.3s ease;
+    }
+    
+    .pdf-card h3 {
+      margin-bottom: 1rem;
+      color: #f9fafb;
+      text-align: center;
+    }
+    
+    .pdf-card:hover {
+      transform: scale(1.01);
+    }
   </style>
 </head>
   <!-- the above is styling below here is the navigation tabs and the sections-->
@@ -188,19 +207,23 @@
 <!-- Lab Reports Section -->
 <section id="lab-reports">
   <h2>Lab Reports</h2>
-  <p>Preview or read each lab report directly below:</p>
 
-  <div style="margin-bottom: 2rem;">
+  <div class="pdf-card">
     <h3>Power Measurements Lab Report</h3>
     <iframe src="https://drive.google.com/file/d/1fcDD1I49CfYEdMc6i5kwbMu3EwFcnzzy/preview" width="100%" height="500px" style="border: none;"></iframe>
+  </div>
+
+  <div class="pdf-card">
+    <h3>Filter Analysis Lab Report</h3>
     <iframe src="https://drive.google.com/file/d/1tjl5xguiClZi8_g9NpJN4wzW8izX3wDE/preview" width="100%" height="500px" style="border: none;"></iframe>
+  </div>
+
+  <div class="pdf-card">
+    <h3>Wireless Charging System Report</h3>
     <iframe src="https://drive.google.com/file/d/1thUjH2pB64ilPenuksI4JDpY1O4FHa5M/preview" width="100%" height="500px" style="border: none;"></iframe>
   </div>
-  
-    <div style="margin-bottom: 2rem;">
-      <h3>Filter Analysis Lab Reports</h3>
-      <iframe src="https://drive.google.com/file/d/1FV9CE8Tgqc3Mnv0JnWH6v0027CNhaWpB/preview" width="100%" height="500px" style="border: none;"></iframe>
-    </div>
+</section>
+
 
 <!-- here is the projects section -->
   <section id="projects">
