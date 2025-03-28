@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<!--Here is the Game plan for the future of this website
+1. move hobbies to end of page 
+2. make a bubble for the contacts
+3. change the label from labs to hobbies and change the order
+4. more to the personal projects section - auto texter, wind mill, embed stl file
+5. refine writing make descritptions more proffectional and make the about me better
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -150,14 +157,14 @@
     }
   </style>
 </head>
-  <!-- i dont fully understand wahts above but below here is the navigation tabs and the sections-->
+  <!-- the above is styling below here is the navigation tabs and the sections-->
 <body>
   <nav aria-label="Main navigation">
     <a href="#about">About</a>
-    <a href="#Hobbies">Labs</a>
     <a href="#projects">Projects</a>
     <a href="#resume">Resume</a>
     <a href="#lab-reports">Lab Reports</a>
+    <a href="#Hobbies">Hobbies</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -170,42 +177,6 @@
   <section id="about">
     <h2>About Me</h2>
     <p>I’m a hands-on engineer who thrives at the intersection of creativity, precision, and exploration. My interests lie in RF systems, analog circuits, embedded development, and systems integration.</p>
-  </section>
-  <!-- here is the hobbies section -->
-  <section id="Hobbies">
-    <h2>What I like to do</h2>
-    <div class="project-gallery">
-      <div class="project-card" onclick="openPopup('Back-Packing', `I love to explore the outdoors and feel the wind on my face and the burn in my legs.`)">
-        <img src="https://github.com/DSR-byte/DSR-byte.github.io/blob/main/IMG_1514.jpeg?raw=true" alt="Back-Packing">
-        <div class="content">
-          <h3>Back-Packing</h3>
-        </div>
-      </div>
-      <div class="project-card" onclick="openPopup('Coding', `Coding is my creative outlet. It gives me the unique ability to take an idea and bring it to life instantly. I enjoy the immediate feedback loop—writing code, testing it, and seeing real results unfold in real time. It's this blend of creativity and problem-solving that fuels my passion for building systems that are both functional and innovative. This very website is a testimante to that.`)">
-        <img src="https://github.com/DSR-byte/DSR-byte.github.io/blob/main/Website.png?raw=true" alt="Coding">
-        <div class="content">
-          <h3>Coding</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-<!-- here is the projects section -->
-  <section id="projects">
-    <h2>Personal Projects</h2>
-    <div class="project-gallery">
-      <div class="project-card" onclick="openPopup('Wireless Charging System', 'Built a small-scale wireless power transfer prototype using LTSpice, MATLAB, and Fusion 360.')">
-        <img src="https://i0.wp.com/blog.ugreen.com/wp-content/uploads/2022/03/wireless-charging-speed_无文案.png?resize=1140%2C680&ssl=1" alt="Wireless Charging">
-        <div class="content">
-          <h3>Wireless Charging System</h3>
-        </div>
-      </div>
-      <div class="project-card" onclick="openPopup('Hamilton Stage Model', 'Created a mechanical stage simulator with PCB design, Arduino programming, and 3D printed parts.')">
-        <img src="https://github.com/DSR-byte/DSR-byte.github.io/blob/main/Hamilton%20stage.png?raw=true" alt="Hamilton Stage Model">
-        <div class="content">
-          <h3>Hamilton Stage Model</h3>
-        </div>
-      </div>
-    </div>
   </section>
 <!-- here is the resume section -->
   <section id="resume">
@@ -230,15 +201,70 @@
       <h3>Filter Analysis Lab Reports</h3>
       <iframe src="https://drive.google.com/file/d/1FV9CE8Tgqc3Mnv0JnWH6v0027CNhaWpB/preview" width="100%" height="500px" style="border: none;"></iframe>
     </div>
-    
+
+<!-- here is the projects section -->
+  <section id="projects">
+    <h2>Personal Projects</h2>
+    <div class="project-gallery">
+      
+      <div class="project-card" onclick="openPopup('Wireless Charging System', `Built a small-scale wireless power transfer prototype utilizing LTSpice for circuit simulation, MATLAB for analysis, and Fusion 360 for mechanical design.
+      This project allowed me to apply newly introduced concepts in power transfer and regulation, bridging theoretical knowledge with practical experimentation at the component level.
+      I was able to successfully charge a battery wirelessly from a power supply, which made the results especially rewarding and exciting to demonstrate.')">
+        
+        <img src="https://i0.wp.com/blog.ugreen.com/wp-content/uploads/2022/03/wireless-charging-speed_无文案.png?resize=1140%2C680&ssl=1" alt="Wireless Charging">
+        <div class="content">
+          <h3>Wireless Charging System - Working Prototype</h3>
+        </div>
+      </div>
+      
+      <div class="project-card" onclick="openPopup('A Recreation of the Stage in the Musical Hamilton', `I designed and built a mechanical stage simulator inspired by the rotating platform used in the musical Hamilton. 
+      The system incorporated custom PCB design, Arduino programming, and 3D-printed components, along with an IR-based control interface for precise rotational control. 
+      This project was presented at a student showcase, where it received one of the highest evaluation scores among all entries.')">
+        
+        <img src="https://raw.githubusercontent.com/DSR-byte/DSR-byte.github.io/refs/heads/main/Hamiltoc%20stage.HEIC" alt="Hamilton Stage Model">
+        <div class="content">
+          <h3>Custom Motion Control Stage – Working Prototype </h3>
+        </div>
+      </div>
+    </div>
+  </section>
 </section>
+<!-- here is the hobbies section -->
+  <section id="Hobbies">
+    <h2>Hobbies</h2>
+    <div class="project-gallery">
+      
+      <div class="project-card" onclick="openPopup('Back-Packing', `Outside of engineering, I’m passionate about exploring the outdoors. 
+      Whether it’s hiking, cycling, or just being in motion, I find energy in the wind on my face and the burn in my legs. 
+      It’s where I recharge, reflect, and reconnect with the bigger picture.`)">
+        
+        <img src="https://github.com/DSR-byte/DSR-byte.github.io/blob/main/IMG_1514.jpeg?raw=true" alt="Back-Packing">
+        <div class="content">
+          <h3>Back Packing</h3>
+        </div>
+      </div>
+      
+      <div class="project-card" onclick="openPopup('Coding', `Coding is my creative outlet. It gives me the unique ability to take an idea and bring it to life instantly.
+      I enjoy the immediate feedback loop—writing code, testing it, and seeing real results unfold in real time.
+      It's this blend of creativity and problem-solving that fuels my passion for building systems that are both functional and innovative.
+      This very website is a testament to that.`)">
+        
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.makeuseof.com%2Ftag%2Fhobbies-programming-scripting%2F&psig=AOvVaw1r_81mm3haKOWGykxenPPy&ust=1743208897188000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNCcrLvFq4wDFQAAAAAdAAAAABAE" alt="Coding">
+        <div class="content">
+          <h3>Coding</h3>
+        </div>
+      </div>
+    </div>
+  </section>
 <!-- here is the contact section -->
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:drock@calpoly.edu">drock@calpoly.edu</a></p>
-    <p>Phone: (858) 649-3516</p>
+    <div class="contact-box">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:drock@calpoly.edu">drock@calpoly.edu</a></p>
+      <p>Phone: (858) 649-3516</p>
+    </div>
   </section>
-
+  
   <div class="popup-panel" id="popup">
     <div class="popup-content">
       <span class="popup-close" onclick="closePopup()">&times;</span>
@@ -246,9 +272,9 @@
       <p id="popup-desc"></p>
     </div>
   </div>
-<!-- here is where agian im lost but it for controlling the sroll functionality -->
+<!-- here is where agian im lost but its for controlling the sroll functionality -->
   <footer>
-    <p>&copy; 2025 David Rock. Built with 💡 and precision.</p>
+    <p>&copy; 2025 David Rock. This website was designed and developed as part of my professional portfolio.</p>
   </footer>
 
   <script>
