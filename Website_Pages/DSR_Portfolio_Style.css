@@ -1,0 +1,52 @@
+/* DSR_portfolio_style.css */
+
+/* Global Styles */
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(90deg, #00f0ff, #8a00ff);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Main Content */
+main {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #00f0ff;
+}
+
+/* Link Styles */
+a {
+  color: #8a00ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00f0ff;
+  text-decoration: underline;
+}
+
+/* Back Link Style */
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2rem;
+}
