@@ -139,9 +139,12 @@ a:hover {
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
+  object-position: center;
   display: block;
+  background-color: black; /* optional for letterbox area */
 }
+
 
 /* Statement Section */
 .frontpage_statment_box {
