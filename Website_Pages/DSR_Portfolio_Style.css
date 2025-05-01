@@ -121,11 +121,12 @@ a:hover {
 }
 
 .slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
   opacity: 0;
-  transition: opacity 0.6s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 0;
 }
 
@@ -136,10 +137,7 @@ a:hover {
 
 .slide img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
   display: block;
-  border-radius: 8px;
 }
 
 /* Statement Section */
