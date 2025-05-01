@@ -9,6 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
       slides[index].classList.remove("active");
       index = (index + 1) % slides.length;
       slides[index].classList.add("active");
-    }, 3000); // Change slide every 3 seconds
+    }, 10000); // Change slide every 10 seconds
   });
 });
