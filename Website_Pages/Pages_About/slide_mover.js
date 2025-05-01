@@ -1,12 +1,14 @@
-<script>
-  const slides = document.querySelectorAll('.front_page_slider .slide');
-  let currentSlide = 0;
 
-  function showNextSlide() {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const sliders = document.querySelectorAll(".slides");
+  sliders.forEach(slideContainer => {
+    const slides = slideContainer.querySelectorAll(".slide");
+    let index = 0;
 
-  setInterval(showNextSlide, 3000); // every 3 seconds
-</script>
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 3000); // Change slide every 3 seconds
+  });
+});
