@@ -92,7 +92,7 @@ a:hover {
 
 /* PDF Card */
 .pdf-card {
-  background-color: #1f2937;
+  background-color: #179;
   padding: 1.5rem;
   margin: 2rem auto;
   border-radius: 12px;
@@ -198,7 +198,7 @@ a:hover {
 
 .Fp_why_me .tab-content {
   max-width: 800px;
-  margin: 5px auto 0;
+  margin: 40px auto;
   opacity: 0;
   visibility: hidden;
   height: 0;
@@ -274,8 +274,9 @@ a:hover {
 
 /* Footer */
 footer {
-  background-color: #111827;
-  padding: 60px 0;
+  background-color: #179;
+  padding-top: 30px;
+  padding-bottom: 20px;
   margin-top: 80px;
 }
 
@@ -287,7 +288,7 @@ footer {
 }
 
 .footer-nav a {
-  color: #9ca3af;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -295,4 +296,10 @@ footer {
 
 .footer-nav a:hover {
   color: #60a5fa;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 40px;
+  color: #fff;
 }
