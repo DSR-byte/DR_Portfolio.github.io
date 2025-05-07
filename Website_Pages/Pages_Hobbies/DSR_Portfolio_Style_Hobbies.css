@@ -236,6 +236,20 @@ a:hover {
   transition: transform 0.3s ease;
 }
 
+.image-grid p {
+  background-color: #179;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
 /* Contact Section */
 .contact-box {
   background-color: #f9fafb;
