@@ -90,7 +90,6 @@ a:hover {
   font-size: 1.2rem;
 }
 
-/* PDF Card */
 .pdf-card-container {
   display: flex;
   flex-wrap: wrap;
@@ -104,11 +103,12 @@ a:hover {
   background-color: #179;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  flex: 1 1 calc(50% - 20px); /* Two cards per row with a gap */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: calc(50% - 20px); /* Enforces 2 per row with gap */
   transition: transform 0.3s ease;
-  max-width: 100%;
+  box-sizing: border-box;
 }
+
 
 .pdf-card:hover {
   transform: scale(1.01);
